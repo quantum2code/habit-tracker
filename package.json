@@ -11,5 +11,12 @@
   "scripts": {
     "dev:web": "npm run dev --workspace=web",
     "dev:server": "npm run dev --workspace=server"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "jsonwebtoken": "^9.0.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   }
 }
