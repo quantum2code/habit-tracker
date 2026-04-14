@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Habit Tracker</title>
+  <style>
+    body { font-family: Arial; }
+
+    .progress-container {
+      width: 100%;
+      background: #ddd;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .progress-bar {
+      height: 20px;
+      width: 0%;
+      background: green;
+      border-radius: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    .habit {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Habit Tracker</h2>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div id="progressBar" class="progress-bar">0%</div>
+  </div>
+
+  <!-- Habits -->
+  <div class="habit">
+    <input type="checkbox" onclick="updateProgress()"> Exercise
+  </div>
+  <div class="habit">
+    <input type="checkbox" onclick="updateProgress()"> Study
+  </div>
+  <div class="habit">
+    <input type="checkbox" onclick="updateProgress()"> Read
+  </div>
+
+  <script>
+    function updateProgress() {
+      let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      let total = checkboxes.length;
+      let checked = 0;
+
+      checkboxes.forEach(cb => {
+        if (cb.checked) checked++;
+      });
+
+      let percent = Math.round((checked / total) * 100);
+      let bar = document.getElementById("progressBar");
+
+      bar.style.width = percent + "%";
+      bar.innerText = percent + "%";
+    }
+  </script>
+
+</body>
+</html>
