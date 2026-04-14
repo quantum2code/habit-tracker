@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Habit Tracker</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      transition: 0.3s;
+      font-family: Arial;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+
+    button {
+      padding: 10px;
+      margin: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button onclick="toggleTheme()">🌙 Toggle Dark Mode</button>
+
+  <h1>Habit Tracker</h1>
+  <p>Track your habits easily!</p>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+
+</body>
+</html>
